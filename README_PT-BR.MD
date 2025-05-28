@@ -31,26 +31,31 @@ infrastructure/
   ├── databases/
   │   ├── postgres-n8n/
   │   │   ├── configmap.yaml
+  │   │   ├── secret.yaml
   │   │   ├── deployment.yaml
   │   │   └── service.yaml
   │   ├── postgres-keycloak/
   │   │   ├── configmap.yaml
+  │   │   ├── secret.yaml
   │   │   ├── deployment.yaml
   │   │   └── service.yaml
   │   └── redis-n8n/
   │       ├── configmap.yaml
+  │       ├── secret.yaml
   │       ├── deployment.yaml
   │       └── service.yaml
   │
 applications/
   ├── n8n/
   │   ├── configmap.yaml
+  │   ├── secret.yaml
   │   ├── deployment.yaml
   │   ├── service.yaml
   │   └── ingressroute.yaml
   │
   └── keycloak/
       ├── configmap.yaml
+      ├── secret.yaml
       ├── deployment.yaml
       ├── service.yaml
       └── ingressroute.yaml

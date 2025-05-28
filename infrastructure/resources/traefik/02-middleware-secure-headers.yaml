@@ -1,0 +1,17 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: Middleware
+metadata:
+  name: secure-headers
+  namespace: kube-system
+spec:
+  headers:
+    browserXssFilter: true
+    contentTypeNosniff: true
+    forceSTSHeader: true
+    frameDeny: true
+    customResponseHeaders:
+      Content-Security-Policy: "default-src 'self'; frame-ancestors 'none'; object-src 'none';"
+    referrerPolicy: "strict-origin-when-cross-origin"
+    stsIncludeSubdomains: true
+    stsPreload: true
+    stsSeconds: 31536000
